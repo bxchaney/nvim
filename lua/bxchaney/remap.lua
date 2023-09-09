@@ -27,3 +27,6 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+vim.g.blamer_prefix = ' > '
+vim.g.blamer_template = '<committer> | <committer-time> | <summary>'
+vim.g.blamer_enabled = 0
