@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
 
   use ('mbbill/undotree') 
   use ('tpope/vim-fugitive') 
+  use ('APZelos/blamer.nvim')
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
@@ -41,6 +42,7 @@ return require('packer').startup(function(use)
 			  pcall(vim.cmd, 'MasonUpdate')
 		  end,
 	  },
+      {'mhartington/formatter.nvim'},
 	  {'williamboman/mason-lspconfig.nvim'}, -- Optional
 	  {"williamboman/nvim-lsp-installer"},
 
