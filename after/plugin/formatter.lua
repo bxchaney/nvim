@@ -54,6 +54,36 @@ require("formatter").setup({
 			require("formatter.filetypes.cpp").clangformat,
 		},
 
+		haskell = {
+			function()
+				return {
+					exe = "fourmolu",
+					args = {
+						"--stdin-input-file",
+						"--stdin-filepath",
+						util.escape_path(util.get_current_buffer_file_path()),
+					},
+					stdin = true,
+				}
+			end,
+		},
+
+		typescript = {
+			require("formatter.filetypes.typescript").prettier,
+		},
+
+		typescriptreact = {
+			require("formatter.filetypes.typescriptreact").prettier,
+		},
+
+		javascript = {
+			require("formatter.filetypes.javascript").prettier,
+		},
+
+		javascriptreact = {
+			require("formatter.filetypes.javascriptreact").prettier,
+		},
+
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = {
