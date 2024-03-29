@@ -68,6 +68,9 @@ require("formatter").setup({
 			end,
 		},
 
+		css = {
+			require("formatter.filetypes.css").prettier,
+		},
 		typescript = {
 			require("formatter.filetypes.typescript").prettier,
 		},

@@ -3,7 +3,7 @@ local lint = require("lint")
 lint.linters_by_ft = {
 	cmake = { "cmakelint" },
 	cpp = { "cpplint" },
-	python = { "flake8" },
+	python = { "ruff" },
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {

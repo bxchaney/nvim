@@ -11,10 +11,10 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- allows switching between projects
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
@@ -27,6 +27,8 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-vim.g.blamer_prefix = ' > '
-vim.g.blamer_template = '<committer> | <committer-time> | <summary>'
+vim.keymap.set("n", "<leader>nt", "<cmd>tab split<CR>")
+
+vim.g.blamer_prefix = " > "
+vim.g.blamer_template = "<committer> | <committer-time> | <summary>"
 vim.g.blamer_enabled = 0
